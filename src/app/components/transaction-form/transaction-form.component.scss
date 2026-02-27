@@ -4,7 +4,7 @@
   border: $border-style;
   padding: $padding-m;
   border-radius: $border-radius-m;
-  background-color: $background-color;
+  background-color: white;
 
   display: flex;
   flex-direction: column;
@@ -18,16 +18,22 @@
 
 .form-heading {
   text-transform: uppercase;
+  align-self: center;
 }
 
 .form-input {
   display: flex;
   flex-direction: column;
   gap: $gap-xs;
+  width: 25rem;
 
   label {
     font-weight: bold;
   }
+}
+
+p-selectbutton {
+  align-self: center;
 }
 
 .form-footer {

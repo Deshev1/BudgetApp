@@ -1,12 +1,18 @@
 <form class="transaction-form">
     <h3 class="form-heading">Add new transaction</h3>
+    <p-selectbutton [options]="transactionOptions" id="type" />
     <div class="form-input">
-        <label for="title">Transaction title</label>
+        <label for="title">Title</label>
         <input id="title" type="text" pInputText>
     </div>
     <div class="form-input">
-        <label for="amount">Transaction amount</label>
+        <label for="amount">Amount</label>
         <p-inputnumber id="amount" />
+    </div>
+
+    <div class="form-input">
+        <label for="date">Date</label>
+        <p-datepicker id="date" [showTime]="true" [showIcon]="true"></p-datepicker>
     </div>
 
     <p-button class="submit-btn">Submit</p-button>
