@@ -1,0 +1,12 @@
+node_modules
+dist
+build
+.git
+*.log
+coverage
+.vscode
+*.tmp
+*.swp
+*.swo
+.DS_Store
+.husky/*
