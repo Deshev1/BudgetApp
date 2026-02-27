@@ -1,0 +1,41 @@
+@use '../../styles/variables.scss' as *;
+
+.transaction-form {
+  border: $border-style;
+  padding: $padding-m;
+  border-radius: $border-radius-m;
+  background-color: $background-color;
+
+  display: flex;
+  flex-direction: column;
+  gap: $gap-s;
+}
+
+.form-header {
+  width: 100%;
+  border-bottom: $border-style;
+}
+
+.form-heading {
+  text-transform: uppercase;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-xs;
+
+  label {
+    font-weight: bold;
+  }
+}
+
+.form-footer {
+  display: flex;
+  width: 100%;
+  border-top: $border-style;
+}
+
+.submit-btn {
+  align-self: center;
+}
