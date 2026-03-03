@@ -1,29 +1,35 @@
 <form class="transaction-form">
-    <h3 class="form-heading">Add new transaction</h3>
-    <p class="required-instructions">All fields marked with (*) are required.</p>
-    <div class="form-input centered">
-        <label for="type">Type*</label>
-        <p-selectbutton [options]="transactionOptions" id="type" size="small" />
+    <div class="form-header">
+        <h2 class="form-heading">Add new transaction</h2>
     </div>
-    <div class="form-input">
-        <label for="title">Title*</label>
-        <input id="title" type="text" pInputText pSize="small">
-    </div>
-    <div class="form-input">
-        <label for="amount">Amount*</label>
-        <p-inputnumber inputId="amount" size="small" />
-    </div>
-    <div class="form-input">
-        <label for="date">Date*</label>
-        <p-datepicker inputId="date" [showTime]="true" [showIcon]="true" size="small"></p-datepicker>
-           <div class="time-toggle">
-            <label for="time">Include time:</label><p-toggleswitch inputId="time" />
+    <div class="form-body">
+        <p class="required-instructions">All fields marked with (*) are required.</p>
+        <div class="form-input centered">
+            <label for="type">Type*</label>
+            <p-selectbutton [options]="transactionOptions" id="type" size="small" />
+        </div>
+        <div class="form-input">
+            <label for="title">Title*</label>
+            <input id="title" type="text" pInputText pSize="small">
+        </div>
+        <div class="form-input">
+            <label for="amount">Amount*</label>
+            <p-inputnumber inputId="amount" size="small" />
+        </div>
+        <div class="form-input">
+            <label for="date">Date*</label>
+            <p-datepicker inputId="date" [showTime]="true" [showIcon]="true" size="small"></p-datepicker>
+            <div class="time-toggle">
+                <label for="time">Include time:</label><p-toggleswitch inputId="time" />
+            </div>
+        </div>
+        <div class="form-input">
+            <label for="note">Note</label>
+            <textarea pTextarea placeholder="Describe your transaction here..." id="note" [autoResize]="true"
+                pSize="small"></textarea>
         </div>
     </div>
-    <div class="form-input">
-        <label for="note">Note</label>
-        <textarea pTextarea placeholder="Describe your transaction here..." id="note" [autoResize]="true"
-            pSize="small"></textarea>
+    <div class="form-footer">
+        <p-button class="submit-btn">Add</p-button>
     </div>
-    <p-button class="submit-btn">Add</p-button>
 </form>

@@ -33,28 +33,6 @@
 
 // //Font sizes
 // $font-size-l: 2.5rem;
-
-//Fonts
-$body-font: 'Inter', sans-serif;
-
-//Fony sizes
-$font-size-s: 0.875rem;
-$font-size-m: 1rem;
-
-//Gaps
-$gap-xs: 0.5rem;
-$gap-s: 1rem;
-$gap-m: 2rem;
-
-//Paddings
-$padding-m: 2rem;
-
-//Border radius
-$border-radius-m: 0.375rem;
-
-// Border styles
-$border-style: 2px solid black;
-
 //Colors
 $primary-color: #f97316;
 $secondary-color: #ffc83d;
@@ -64,3 +42,29 @@ $background-color: #f8faf7;
 
 $neutral-color: #e5e7eb;
 $neutral-color_2: #1f2937;
+
+$primeNg-input-border-grey: #cbd5e1;
+
+//Fonts
+$body-font: 'Inter', sans-serif;
+
+//Fony sizes
+$font-size-s: 0.875rem;
+$font-size-m: 1rem;
+$font-size-l: 3rem;
+
+//Gaps
+$gap-xs: 0.5rem;
+$gap-s: 1rem;
+$gap-m: 2rem;
+
+//Paddings
+$padding-s: 1rem;
+$padding-m: 2rem;
+
+//Border radius
+$border-radius-m: 0.375rem;
+
+// Border styles
+$border-style: 1px solid #cbd5e1;
+$border-style-bold: 2px solid black;

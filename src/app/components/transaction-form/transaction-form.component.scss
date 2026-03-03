@@ -1,24 +1,42 @@
 @use '../../styles/variables.scss' as *;
 
 .transaction-form {
-  border: $border-style;
-  padding: $padding-m;
+  border: $border-style-bold;
   border-radius: $border-radius-m;
   background-color: white;
-
-  display: flex;
-  flex-direction: column;
-  gap: $gap-s;
 }
 
 .form-header {
-  width: 100%;
   border-bottom: $border-style;
+}
+
+.form-body {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-s;
+  padding: $padding-s;
+}
+
+.form-footer {
+  border-top: $border-style;
+}
+
+.form-header,
+.form-footer {
+  width: 100%;
+  padding: $padding-s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .form-heading {
   text-transform: uppercase;
   align-self: center;
+}
+
+.required-instructions {
+  font-size: $font-size-s;
 }
 
 .form-input {
@@ -43,16 +61,6 @@
   }
 }
 
-.form-footer {
-  display: flex;
-  width: 100%;
-  border-top: $border-style;
-}
-
 .submit-btn {
   align-self: center;
-}
-
-.required-instructions {
-  font-size: $font-size-s;
 }
