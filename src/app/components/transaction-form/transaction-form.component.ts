@@ -15,6 +15,8 @@ import {
   transactionFormDefaults,
   MIN_TRANSACTION_AMOUNT,
   MIN_TITLE_LENGTH,
+  SupportedCurrencies,
+  TransactionTypes,
 } from '../../constants/transaction.const';
 
 @Component({
@@ -33,14 +35,13 @@ import {
   styleUrl: './transaction-form.component.scss',
 })
 export class TransactionFormComponent {
-  private readonly formBuilder = inject(FormBuilder);
+  private readonly fb = inject(FormBuilder);
 
-  readonly transactionOptions = transactionOptions;
-  readonly currencyOptions = currencyOptions;
-  readonly minTransactionAmont = MIN_TRANSACTION_AMOUNT;
-  readonly minTitleLength = MIN_TITLE_LENGTH;
+  readonly transactionOptions: TransactionTypes[] = transactionOptions;
+  readonly currencyOptions: SupportedCurrencies[] = currencyOptions;
+  currentDate: Date = new Date();
 
-  readonly transactionForm = this.formBuilder.group({
+  readonly transactionForm = this.fb.group({
     currency: [transactionFormDefaults.currency, Validators.required],
     type: [transactionFormDefaults.type, Validators.required],
     title: [

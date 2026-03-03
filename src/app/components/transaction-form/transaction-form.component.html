@@ -26,7 +26,7 @@
         </div>
         <div class="form-input">
             <label for="date">Date*</label>
-            <p-datepicker formControlName="date" inputId="date"
+            <p-datepicker [maxDate]="currentDate" formControlName="date" inputId="date"
                 [showTime]="transactionForm.controls.includeTime.value ?? false" [showIcon]="true"
                 size="small"></p-datepicker>
             <div class="time-toggle">
