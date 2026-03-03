@@ -1,16 +1,18 @@
-<form [formGroup]="transactionForm" class="transaction-form">
+<form [formGroup]="transactionForm" (ngSubmit)="onSubmit()" class="transaction-form">
     <div class="form-header">
         <h2 class="form-heading">Add new transaction</h2>
     </div>
     <div class="form-body">
         <p class="required-instructions">All fields marked with (*) are required.</p>
-        <div class="form-input centered">
-            <label for="type">Currency*</label>
-            <p-selectbutton formControlName="currency" [options]="currencyOptions" id="type" size="small" />
-        </div>
-        <div class="form-input centered">
-            <label for="type">Type*</label>
-            <p-selectbutton formControlName="type" [options]="transactionOptions" id="type" size="small" />
+        <div class="select-buttons">
+            <div class="form-input">
+                <label for="type">Type*</label>
+                <p-selectbutton formControlName="type" [options]="transactionOptions" id="type" size="small" />
+            </div>
+            <div class="form-input">
+                <label for="type">Currency*</label>
+                <p-selectbutton formControlName="currency" [options]="currencyOptions" id="type" size="small" />
+            </div>
         </div>
         <div class="form-input">
             <label for="title">Title*</label>
@@ -39,6 +41,6 @@
         </div>
     </div>
     <div class="form-footer">
-        <p-button (onClick)="onSubmit()" class="submit-btn">Add</p-button>
+        <p-button type="submit" class="submit-btn">Add</p-button>
     </div>
 </form>

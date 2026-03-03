@@ -48,6 +48,24 @@
   label {
     font-weight: bold;
   }
+
+  p-selectbutton {
+    align-self: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.select-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 25rem;
+  gap: $gap-s;
+
+  .form-input {
+    width: auto;
+  }
 }
 
 .time-toggle {
@@ -63,4 +81,8 @@
 
 .submit-btn {
   align-self: center;
+}
+
+p-selectbutton {
+  width: auto;
 }
