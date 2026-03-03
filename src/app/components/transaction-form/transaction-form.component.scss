@@ -32,8 +32,15 @@
   }
 }
 
-p-selectbutton {
-  align-self: center;
+.time-toggle {
+  display: flex;
+  align-items: center;
+  gap: $gap-xs;
+
+  label {
+    font-weight: normal;
+    font-size: $font-size-s;
+  }
 }
 
 .form-footer {
@@ -44,4 +51,8 @@ p-selectbutton {
 
 .submit-btn {
   align-self: center;
+}
+
+.required-instructions {
+  font-size: $font-size-s;
 }

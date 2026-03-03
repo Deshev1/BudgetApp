@@ -5,6 +5,8 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { ButtonModule } from 'primeng/button';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { DatePickerModule } from 'primeng/datepicker';
+import { ToggleSwitchModule } from 'primeng/toggleswitch';
+import { TextareaModule } from 'primeng/textarea';
 
 @Component({
   selector: 'bud-transaction-form',
@@ -14,6 +16,8 @@ import { DatePickerModule } from 'primeng/datepicker';
     ButtonModule,
     SelectButtonModule,
     DatePickerModule,
+    ToggleSwitchModule,
+    TextareaModule,
   ],
   templateUrl: './transaction-form.component.html',
   styleUrl: './transaction-form.component.scss',
