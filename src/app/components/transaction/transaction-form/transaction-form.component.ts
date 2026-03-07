@@ -17,7 +17,7 @@ import {
   MIN_TITLE_LENGTH,
   SupportedCurrencies,
   TransactionTypes,
-} from '../../constants/transaction.const';
+} from '../../../constants/transaction.const';
 
 @Component({
   selector: 'bud-transaction-form',
@@ -36,7 +36,6 @@ import {
 })
 export class TransactionFormComponent {
   private readonly fb = inject(FormBuilder);
-
   readonly transactionOptions: TransactionTypes[] = transactionOptions;
   readonly currencyOptions: SupportedCurrencies[] = currencyOptions;
   currentDate: Date = new Date();
@@ -57,7 +56,7 @@ export class TransactionFormComponent {
     note: transactionFormDefaults.note,
   });
 
-  onSubmit() {
+  submitForm() {
     this.transactionForm.markAllAsTouched();
     this.transactionForm.markAllAsDirty();
 

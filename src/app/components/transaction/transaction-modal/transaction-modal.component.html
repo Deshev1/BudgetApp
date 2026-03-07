@@ -1,0 +1,5 @@
+<p-dialog [(visible)]="isModalOpen">
+    <bud-transaction-form></bud-transaction-form>
+    <p-button type="submit">Add transaction</p-button>
+    <p-button (onClick)="closeModal()">Cancel</p-button>
+</p-dialog>

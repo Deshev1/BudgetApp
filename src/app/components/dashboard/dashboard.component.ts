@@ -1,11 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, viewChild } from '@angular/core';
 
-import { TransactionFormComponent } from '../transaction-form/transaction-form.component';
+import { TransactionModalComponent } from '../transaction/transaction-modal/transaction-modal.component';
+import { Button } from 'primeng/button';
 
 @Component({
   selector: 'bud-dashboard',
-  imports: [TransactionFormComponent],
+  imports: [TransactionModalComponent, Button],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
 })
-export class DashboardComponent {}
+export class DashboardComponent {
+  readonly transactionModal = viewChild(TransactionModalComponent);
+
+  openTransactionModal() {
+    this.transactionModal()?.openModal();
+  }
+}
