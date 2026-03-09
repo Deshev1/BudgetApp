@@ -3,10 +3,10 @@ import { APP_PATHS } from '../constants/app.paths';
 
 export const authGuard: CanActivateChildFn = (childRoute) => {
   // Will be used once authentication is implemented.
-  const isAuthenticated = true;
+  const isAuthenticated = false;
 
   if (!isAuthenticated) {
-    return createUrlTreeFromSnapshot(childRoute, ['../', APP_PATHS.noAccess]);
+    return createUrlTreeFromSnapshot(childRoute, ['../', APP_PATHS.login]);
   }
 
   return true;
