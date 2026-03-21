@@ -1,11 +1,22 @@
-<form [formGroup]="loginForm" (ngSubmit)="login()">
-    <div class="form-input">
-        <label for="username">Username</label>
-        <input id="username" pInputText formControlName="username">
-    </div>
-    <div class="form-input">
-        <label for="password">Password</label>
-        <p-password id="password" formControlName="password"></p-password>
-    </div>
-    <p-button type="submit">Log in</p-button>
-</form>
+<div class="full-screen align-center">
+    <form [formGroup]="loginForm" (ngSubmit)="login()" class="border-form">
+        <div class="form-header">
+            <h1>Login</h1>
+        </div>
+        <div class="form-body">
+            <div class="form-input">
+                <label for="username">Username</label>
+                <input id="username" pInputText formControlName="username">
+            </div>
+            <div class="form-input">
+                <label for="password">Password</label>
+                <p-password id="password" formControlName="password" fluid></p-password>
+            </div>
+
+        </div>
+
+        <div class="form-footer"><p-button type="submit">Log in</p-button>
+        </div>
+
+    </form>
+</div>

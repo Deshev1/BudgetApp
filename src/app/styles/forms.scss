@@ -1,7 +1,7 @@
 @use '../../app/styles/variables.scss' as *;
 
-.transaction-form {
-  border: $border-style-bold;
+.border-form {
+  border: $border-style;
   border-radius: $border-radius-m;
   background-color: white;
 }
@@ -43,7 +43,6 @@
   display: flex;
   flex-direction: column;
   gap: $gap-xs;
-  width: 25rem;
 
   label {
     font-weight: bold;

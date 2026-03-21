@@ -32,7 +32,6 @@ import {
     ReactiveFormsModule,
   ],
   templateUrl: './transaction-form.component.html',
-  styleUrl: './transaction-form.component.scss',
 })
 export class TransactionFormComponent {
   private readonly fb = inject(FormBuilder);
