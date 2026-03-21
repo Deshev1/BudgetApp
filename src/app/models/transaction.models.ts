@@ -3,12 +3,15 @@ import {
   TransactionTypes,
 } from '../constants/transaction.const';
 
-export interface TransactionForm {
+export interface Transaction {
+  id: string;
   currency: SupportedCurrencies;
-  type: TransactionTypes;
+  transactionType: TransactionTypes;
   title: string;
   amount: number;
   date: Date;
   includeTime: boolean;
-  note: string;
+  note?: string;
 }
+
+export type CreateTransaction = Omit<Transaction, 'id'>;

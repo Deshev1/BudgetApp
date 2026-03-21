@@ -48,7 +48,7 @@ export class TransactionFormComponent {
 
   readonly transactionForm = this.fb.group({
     currency: [transactionFormDefaults.currency, Validators.required],
-    type: [transactionFormDefaults.type, Validators.required],
+    type: [transactionFormDefaults.transactionType, Validators.required],
     title: [
       transactionFormDefaults.title,
       [Validators.required, Validators.minLength(MIN_TITLE_LENGTH)],

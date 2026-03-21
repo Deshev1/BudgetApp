@@ -1,4 +1,4 @@
-import { TransactionForm } from '../models/transaction.models';
+import { CreateTransaction } from '../models/transaction.models';
 
 export const MIN_TRANSACTION_AMOUNT = 0.01;
 export const MIN_TITLE_LENGTH = 1;
@@ -22,9 +22,9 @@ export type TransactionTypes =
 export const currencyOptions = Object.values(SUPPORTED_CURRENCIES);
 export const transactionOptions = Object.values(TRANSACTION_TYPES);
 
-export const transactionFormDefaults: TransactionForm = {
+export const transactionFormDefaults: CreateTransaction = {
   currency: SUPPORTED_CURRENCIES.eur,
-  type: TRANSACTION_TYPES.income,
+  transactionType: TRANSACTION_TYPES.income,
   title: '',
   amount: 0,
   date: new Date(),
