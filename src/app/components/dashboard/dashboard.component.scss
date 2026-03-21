@@ -10,9 +10,7 @@
 .dashboard-content {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: $gap-m;
   padding: $gap-m; //Use gap value here so that they always match.
-}
-
-.transaction-form-wrapper {
 }

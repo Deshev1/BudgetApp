@@ -4,6 +4,7 @@
   border: $border-style;
   border-radius: $border-radius-m;
   background-color: white;
+  min-width: 23rem;
 }
 
 .form-header {
@@ -59,7 +60,6 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 25rem;
   gap: $gap-s;
 
   .form-input {
