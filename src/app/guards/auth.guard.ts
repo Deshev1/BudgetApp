@@ -1,12 +1,13 @@
 import { CanActivateChildFn, createUrlTreeFromSnapshot } from '@angular/router';
+import { AuthService } from '../services/auth/auth.service';
 import { APP_PATHS } from '../constants/app.paths';
+import { inject } from '@angular/core';
 
 export const authGuard: CanActivateChildFn = (childRoute) => {
-  // Will be used once authentication is implemented.
-  const isAuthenticated = true;
+  const authService = inject(AuthService);
 
-  if (!isAuthenticated) {
-    return createUrlTreeFromSnapshot(childRoute, ['../', APP_PATHS.noAccess]);
+  if (!authService.isLoggedIn()) {
+    return createUrlTreeFromSnapshot(childRoute, ['../', APP_PATHS.login]);
   }
 
   return true;

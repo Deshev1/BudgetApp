@@ -5,6 +5,7 @@ import { APP_PATHS } from './constants/app.paths';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 import { NoAccessComponent } from './shared/components/no-access/no-access.component';
+import { LoginComponent } from './shared/components/login/login.component';
 
 export const routes: Routes = [
   {
@@ -20,5 +21,6 @@ export const routes: Routes = [
     ],
   },
   { path: APP_PATHS.noAccess, component: NoAccessComponent },
+  { path: APP_PATHS.login, component: LoginComponent },
   { path: '**', component: NotFoundComponent },
 ];

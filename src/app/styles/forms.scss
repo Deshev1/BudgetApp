@@ -1,0 +1,88 @@
+@use '../../app/styles/variables.scss' as *;
+
+.transaction-form {
+  border: $border-style-bold;
+  border-radius: $border-radius-m;
+  background-color: white;
+}
+
+.form-header {
+  border-bottom: $border-style;
+}
+
+.form-body {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-s;
+  padding: $padding-s;
+}
+
+.form-footer {
+  border-top: $border-style;
+}
+
+.form-header,
+.form-footer {
+  width: 100%;
+  padding: $padding-s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-heading {
+  text-transform: uppercase;
+  align-self: center;
+}
+
+.required-instructions {
+  font-size: $font-size-s;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-xs;
+  width: 25rem;
+
+  label {
+    font-weight: bold;
+  }
+
+  p-selectbutton {
+    align-self: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.select-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 25rem;
+  gap: $gap-s;
+
+  .form-input {
+    width: auto;
+  }
+}
+
+.time-toggle {
+  display: flex;
+  align-items: center;
+  gap: $gap-xs;
+
+  label {
+    font-weight: normal;
+    font-size: $font-size-s;
+  }
+}
+
+.submit-btn {
+  align-self: center;
+}
+
+p-selectbutton {
+  width: auto;
+}
